@@ -34,7 +34,7 @@ function main {
     fi
     
     # push the app
-    if ! cf push "$BLUE" -d "$DOMAIN" -i "$INSTANCES" -m $MEMORY --no-route --no-start; then
+    if ! cf push "$BLUE" -d "$DOMAIN" -i "$INSTANCES" -m $MEMORY --no-route --no-start -v; then
         error "Error pushing this app."
     fi
 
